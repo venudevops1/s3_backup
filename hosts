@@ -1,0 +1,2 @@
+[TestNodes]
+35.160.234.104 ansible_ssh_user="ubuntu" ansible_ssh_private_key_file=/home/ubuntu/test.pem
