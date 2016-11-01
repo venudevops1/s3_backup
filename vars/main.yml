@@ -3,5 +3,5 @@ bucket_name: 'acme-singapore'
 aws_output_format: 'json'
 aws_region: 'ap-southeast-2'
 s3_region: 'ap-southeast-2'
-aws_access_key_id: 'AKIAJQWQGWCAETO5FQ5A'
-aws_secret_key_id: 't0/KBZ1tQZzPyicT6BXdmLrg6zOR5dNlTpH4TOpb'
+aws_access_key_id: 
+aws_secret_key_id: 

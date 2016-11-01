@@ -1,0 +1,30 @@
+---
+- name: 'Install Python PIP'
+  tags: 'aws-cli'
+  sudo: 'yes'
+  apt: >
+    pkg=python-pip
+    state=latest
+
+- name: 'Install AWS CLI'
+  tags: 'aws-cli'
+  sudo: 'yes'
+  pip: >
+    name=awscli
+    state=latest
+
+- name: 'Install boto'
+  shell: pip install boto
+  sudo: yes
+
+- name: configuring aws cli
+  shell: export aws_access_key_id={{ aws_access_key_id }}
+  sudo: yes
+
+- name: configuring aws cli
+  shell: export AWS_SECRET_ACCESS_KEY={{ aws_secret_key_id }}
+  sudo: yes
+
+- name: download files from s3
+  shell: aws s3 sync s3://acme-singapore /home/ubuntu/copy
+
